@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Praia</title>
+</head>
+<style>
+    /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffcc00;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 10px 0;
+    border-bottom: 2px solid #ffcc00;
+}
+
+.menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.menu a:hover {
+    background-color: #ffcc00;
+}
+
+.banner {
+    background-color: #ffcc00;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.destaques {
+    padding: 0 20px;
+}
+
+.destaques h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ffcc00;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+/* JavaScript para mostrar/esconder o menu */
+.menu.active {
+    display: flex;
+}
+
+.mapa-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">APP GURIRI</div>
+        <button class="menu-btn">☰</button>
+    </header>
+    
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="infopraia.html">Sobre a Praia</a>
+        <a href="pontos_turisticos.html">Pontos Turísticos</a>
+        <a href="hoteis_restaurantes.html">Hotéis e Restaurantes</a>
+        <a href="contatos.html">Contatos</a>
+        <a href="roteiro.html">Roteiro de Viagem</a>
+    </nav>
+    
+    <main>
+        <section class="banner">
+            <h1>Sobre a Praia</h1>
+            <p>Lugar onde se pode encontrar paz e lazer</p>
+        </section>
+        
+        <section class="destaques">
+        </section>
+    </main>
+
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+        document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
